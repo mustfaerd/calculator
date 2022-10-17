@@ -77,7 +77,10 @@ class Interface(QtWidgets.QMainWindow, Ui_MainWindow):
 
     "Nokta butonu için kullanılan fonksiyon"
     def decimal(self):
-        self.label.setText(self.label.text() + '.') #bitmedi
+        if ('.' in self.label.text()):
+            pass
+        else :
+            self.label.setText(self.label.text() + '.') 
 
     "Sayıyı negatif yaparken çalışacak fonksiyon"
     def negative(self):
